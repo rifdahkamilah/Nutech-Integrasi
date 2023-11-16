@@ -2,7 +2,7 @@ package com.boot.demo.controller;
 
 import java.io.File;
 
-import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
+import org.springframework.security.core.Authentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -175,7 +175,7 @@ public class ModuleMembershipController {
 
 		try {
 			if (authentication != null) {
-				String userEmail = authentication.name();
+				String userEmail = authentication.getName();
 				UserProfile userProfile = userProfileService.getUserProfileByEmail(userEmail);
 
 				result.setStatus(0);
@@ -203,7 +203,7 @@ public class ModuleMembershipController {
 		HttpResponseModel<UserProfile> result = new HttpResponseModel<>();
 
 		try {
-			String userEmail = authentication.name();
+			String userEmail = authentication.getName();
 
 			UserProfile existingProfile = userProfileService.getUserProfileByEmail(userEmail);
 
@@ -235,7 +235,7 @@ public class ModuleMembershipController {
 		HttpResponseModel<UserProfile> result = new HttpResponseModel<>();
 
 		try {
-			String userEmail = authentication.name();
+			String userEmail = authentication.getName();
 
 			if (!file.getContentType().equals("image/jpeg") && !file.getContentType().equals("image/png")) {
 				result.setStatus(102);
