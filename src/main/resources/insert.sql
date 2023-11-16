@@ -1,5 +1,5 @@
-CREATE DATABASE railway;
-USE railway;
+CREATE DATABASE sims_ppob;
+USE sims_ppob;
 
 DROP TABLE IF EXISTS t_user;
 CREATE TABLE t_user (
