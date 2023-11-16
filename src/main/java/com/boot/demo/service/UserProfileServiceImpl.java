@@ -12,6 +12,7 @@ import com.boot.demo.repository.UserProfileRepository;
 @Service
 @Transactional
 public class UserProfileServiceImpl implements UserProfileService {
+	
 	@Autowired
 	private UserProfileRepository userProfileRepository;
 	

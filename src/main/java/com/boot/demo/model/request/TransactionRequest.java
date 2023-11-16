@@ -1,8 +1,4 @@
-package com.boot.demo.model;
-
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Column;
-import org.springframework.data.relational.core.mapping.Table;
+package com.boot.demo.model.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

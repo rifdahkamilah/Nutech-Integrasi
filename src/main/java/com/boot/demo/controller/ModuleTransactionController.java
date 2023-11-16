@@ -21,7 +21,7 @@ import com.boot.demo.model.Balance;
 import com.boot.demo.model.TopUpRequest;
 import com.boot.demo.model.Transaction;
 import com.boot.demo.model.TransactionHistory;
-import com.boot.demo.model.TransactionRequest;
+import com.boot.demo.model.request.TransactionRequest;
 import com.boot.demo.model.response.HttpResponseModel;
 import com.boot.demo.model.response.TransactionHistoryResponse;
 import com.boot.demo.repository.BalanceRepository;

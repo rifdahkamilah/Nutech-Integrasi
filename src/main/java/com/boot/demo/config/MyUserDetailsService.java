@@ -30,14 +30,14 @@ public class MyUserDetailsService implements UserDetailsService {
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		// Mengambil data user
+	
 		User user = this.userRepository.findByEmail(username);
 		if (user==null) {
 			throw new UsernameNotFoundException("User not found with username: "+username);
 		}
 		
 		try {
-			// Mengambil data UserRole
+	
 			List<UserRole> userRoles = this.userRoleRepository.findByIdUserId(username);
 			List<Role> roles = new ArrayList<>();
 			

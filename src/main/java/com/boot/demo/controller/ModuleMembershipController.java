@@ -11,7 +11,6 @@ import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -270,18 +269,4 @@ public class ModuleMembershipController {
 	private String getFileExtension(String fileName) {
 		return fileName.substring(fileName.lastIndexOf(".") + 1);
 	}
-	
-//	@Operation(summary = "Upload User Profile Image", description = "Upload user profile image")
-//	@ApiResponses(value = { @ApiResponse(responseCode = "200", description = "Request Successfully"),
-//			@ApiResponse(responseCode = "400", description = "Bad Request"),
-//			@ApiResponse(responseCode = "401", description = "Unauthorized") })
-//	@PutMapping(value = "/profile/image", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
-//	@SecurityRequirement(name = "nutechintegrasi")
-//	public HttpResponseModel<UserProfile> uploadProfileImage(@RequestParam("file") MultipartFile file, @RequestParam("name") String name) {
-//		
-//		FileUploadRequest fileUploadRequest = new FileUploadRequest(file, name);
-//		
-//		return HttpResponseModel.ok(userProfileService.upload(fileUploadRequest));
-////		HttpResponseModel<UserProfile> result = new HttpResponseModel<>();
-//	}
 }
